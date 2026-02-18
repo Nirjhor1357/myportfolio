@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { GraduationCap, MapPin, Calendar, Award } from 'lucide-react';
+import { GraduationCap, Calendar, Award } from 'lucide-react';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,7 +27,7 @@ const About = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (!sectionRef.current) return;
-      
+
       const rect = sectionRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       const progress = Math.max(0, Math.min(1, 1 - (rect.top / windowHeight)));
@@ -40,18 +40,32 @@ const About = () => {
 
   const imageRotation = (scrollProgress - 0.5) * 10;
 
-  const education = {
-    university: "Chittagong University of Engineering & Technology",
-    degree: "B.Sc. in Mechatronics & Industrial Engineering",
-    location: "Chittagong, Bangladesh",
-    period: "2021 - Present",
-  };
+  const education = [
+    {
+      id: 1,
+      degree: "BSc in Mechatronics & Industrial Engineering",
+      institution: "Chittagong University of Engineering & Technology (CUET)",
+      period: "2024 – Present",
+      description:
+        "Undergraduate student focusing on robotics, automation, and intelligent systems.",
+    },
 
-  const achievements = [
+    {
+      id: 2,
+      degree: "Higher Secondary Certificate (HSC)",
+      institution: "BAF Shaheen College Dhaka",
+      period: "2022 – 2024",
+      description:
+        "Completed HSC in Science group with strong foundations in Mathematics and Physics.",
+    },
+  ];
+
+  const achievements: string[] = [
     "Dean's List - Academic Excellence",
     "Robotics Club Member",
     "Industrial Automation Workshop Participant",
   ];
+
 
   return (
     <section
@@ -162,46 +176,42 @@ const About = () => {
               }}
             >
               <p>
-                As a Mechatronics and Industrial Engineering student at CUET, I am passionate 
-                about combining mechanical systems with electronics and intelligent control. 
-                My academic journey has equipped me with a strong foundation in automation, 
+                As a Mechatronics and Industrial Engineering student at CUET, I am passionate
+                about combining mechanical systems with electronics and intelligent control.
+                My academic journey has equipped me with a strong foundation in automation,
                 robotics, and industrial processes.
               </p>
               <p>
-                I believe in the power of interdisciplinary engineering to solve complex 
-                real-world problems. From designing automated systems to optimizing industrial 
+                I believe in the power of interdisciplinary engineering to solve complex
+                real-world problems. From designing automated systems to optimizing industrial
                 workflows, I am constantly exploring new technologies and methodologies.
               </p>
             </div>
 
             {/* Education Card */}
-            <div
-              className="bg-gray-50 rounded-2xl p-6 space-y-4"
-              style={{
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
-                transition: 'all 0.6s var(--ease-expo-out) 0.5s',
-              }}
-            >
-              <h3 className="text-lg font-bold text-gray-800 flex items-center gap-2">
-                <GraduationCap className="w-5 h-5 text-blue-900" />
-                Education
-              </h3>
-              <div className="space-y-2">
-                <p className="font-semibold text-gray-800">{education.degree}</p>
-                <p className="text-blue-900 font-medium">{education.university}</p>
-                <div className="flex flex-wrap gap-4 text-sm text-gray-500">
-                  <span className="flex items-center gap-1">
-                    <MapPin className="w-4 h-4" />
-                    {education.location}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4" />
-                    {education.period}
-                  </span>
+            <div className="space-y-4">
+              {education.map((edu) => (
+                <div key={edu.id} className="space-y-2">
+                  <p className="font-semibold text-gray-800 dark:text-gray-200">
+                    {edu.degree}
+                  </p>
+
+                  <p className="text-blue-900 dark:text-blue-400 font-medium">
+                    {edu.institution}
+                  </p>
+
+                  <div className="flex flex-wrap gap-4 text-sm text-gray-500">
+                    <span className="flex items-center gap-1">
+                      <span className="flex items-center gap-1">
+                        <Calendar className="w-4 h-4" />
+                        {edu.period}
+                      </span>
+                    </span>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
+
 
             {/* Achievements */}
             <div

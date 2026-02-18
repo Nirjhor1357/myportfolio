@@ -138,7 +138,7 @@ const CTA = () => {
             <Mail size={18} />
             <span>nowshinnowyalnirjhor@gmail.com</span>
           </a>
-          <a href="tel:+8801XXXXXXXXX" className="flex items-center gap-2 text-gray-600 hover:text-blue-900 transition-colors">
+          <a href="tel:+8801306445939" className="flex items-center gap-2 text-gray-600 hover:text-blue-900 transition-colors">
             <Phone size={18} />
             <span>+880 130-6445939</span>
           </a>
