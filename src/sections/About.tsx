@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { GraduationCap, Calendar, Award } from 'lucide-react';
+import { Calendar, Award } from 'lucide-react';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
