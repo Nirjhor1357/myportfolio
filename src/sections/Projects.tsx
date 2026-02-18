@@ -24,7 +24,7 @@ const projects: Project[] = [
     technologies: ['PLC', 'Sensors', 'Pneumatics', 'HMI'],
     icon: Settings,
     live: '#',
-    github: '#',
+    github: 'https://github.com/Nirjhor1357',
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ const projects: Project[] = [
     technologies: ['SolidWorks', 'AutoCAD', 'FEA', 'GD&T'],
     icon: Wrench,
     live: '#',
-    github: '#',
+    github: 'https://github.com/Nirjhor1357',
   },
   {
     id: 3,
@@ -48,7 +48,7 @@ const projects: Project[] = [
     technologies: ['Arduino', 'Python', 'MQTT', 'Node-RED'],
     icon: Cpu,
     live: '#',
-    github: '#',
+    github: 'https://github.com/Nirjhor1357',
   },
 ];
 
