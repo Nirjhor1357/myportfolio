@@ -143,9 +143,9 @@ Then:
 <p align="center">
   <img src="public/preview.png" width="800" />
 </p>
-``` -->
+``` 
 
----
+--- -->
 
 ## 🎯 Roadmap
 
