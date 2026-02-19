@@ -15,7 +15,7 @@ const Hero = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // ✅ parallax (smooth)
+  // ✅ optimized parallax
   useEffect(() => {
     const handleScroll = () => {
       if (!heroRef.current || !imageRef.current) return;
@@ -24,24 +24,22 @@ const Hero = () => {
       const heroHeight = heroRef.current.offsetHeight;
       const progress = Math.min(scrollY / heroHeight, 1);
 
-      const content =
-        heroRef.current.querySelectorAll('.parallax-content');
+      const content = heroRef.current.querySelectorAll('.parallax-content');
 
       content.forEach((el) => {
-        (el as HTMLElement).style.transform = `translateY(${-progress * 60
-          }px)`;
-        (el as HTMLElement).style.opacity = `${1 - progress * 1.2}`;
+        const element = el as HTMLElement;
+        element.style.transform = `translateY(${-progress * 50}px)`;
+        element.style.opacity = `${1 - progress * 1.1}`;
       });
 
-      imageRef.current.style.transform = `translateY(${progress * 50
-        }px) scale(${1 + progress * 0.06})`;
+      imageRef.current.style.transform = `translateY(${progress * 40}px) scale(${1 + progress * 0.05})`;
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // ✅ smooth cursor glow
+  // ✅ smooth cursor glow (throttled)
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
@@ -59,32 +57,10 @@ const Hero = () => {
   }, []);
 
   const scrollToProjects = () =>
-    document.querySelector('#projects')?.scrollIntoView({
-      behavior: 'smooth',
-    });
+    document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
 
   const scrollToContact = () =>
-    document.querySelector('#cta')?.scrollIntoView({
-      behavior: 'smooth',
-    });
-
-  const renderAnimatedText = (text: string, baseDelay = 0) =>
-    text.split('').map((char, index) => (
-      <span
-        key={index}
-        className="inline-block"
-        style={{
-          opacity: isLoaded ? 1 : 0,
-          transform: isLoaded
-            ? 'translateY(0) rotateX(0deg)'
-            : 'translateY(40px) rotateX(90deg)',
-          transition: `all 0.6s var(--ease-expo-out) ${baseDelay + index * 0.045
-            }s`,
-        }}
-      >
-        {char === ' ' ? '\u00A0' : char}
-      </span>
-    ));
+    document.querySelector('#cta')?.scrollIntoView({ behavior: 'smooth' });
 
   return (
     <section
@@ -97,32 +73,29 @@ const Hero = () => {
         <div className="absolute -top-40 -right-40 h-[600px] w-[600px] rounded-full bg-blue-500/10 blur-3xl" />
         <div className="absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full bg-indigo-500/10 blur-3xl" />
 
-        {/* ✅ FIXED NOISE (subtle) */}
-        {/* ✅ PREMIUM NOISE (VISIBLE BUT SUBTLE) */}
-        {/* noise texture */}
+        {/* ✅ PREMIUM NOISE (properly visible) */}
         <div
-          className="absolute inset-0 pointer-events-none"
+          className="absolute inset-0"
           style={{
             backgroundImage: "url('/images/noise.png')",
             backgroundRepeat: 'repeat',
-            backgroundSize: '200px 200px',
-            opacity: 0.06,
-            mixBlendMode: 'overlay',
+            backgroundSize: '180px 180px',
+            opacity: 0.08,
+            mixBlendMode: 'soft-light',
           }}
         />
-
       </div>
 
-      {/* 🔥 CURSOR GLOW (VISIBLE NOW) */}
+      {/* 🔥 CURSOR GLOW */}
       <div
         className="pointer-events-none fixed inset-0 z-[1]"
         style={{
           background: `radial-gradient(
-            550px circle at ${mousePosition.x}px ${mousePosition.y}px,
-            rgba(59,130,246,0.18),
-            rgba(59,130,246,0.10) 30%,
-            rgba(59,130,246,0.04) 55%,
-            transparent 70%
+            520px circle at ${mousePosition.x}px ${mousePosition.y}px,
+            rgba(59,130,246,0.16),
+            rgba(59,130,246,0.08) 30%,
+            rgba(59,130,246,0.03) 55%,
+            transparent 72%
           )`,
         }}
       />
@@ -137,20 +110,26 @@ const Hero = () => {
                 Mechatronics Engineer & Full-Stack Developer
               </p>
 
+              {/* ✅ FIXED NAME (desktop + mobile perfect) */}
               <h1
-                className="text-5xl font-bold leading-tight tracking-[-0.02em] dark:text-white md:text-6xl lg:text-7xl"
+                className="font-bold leading-[0.95] tracking-[-0.02em] text-[42px] sm:text-5xl md:text-6xl lg:text-7xl dark:text-white"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
-                <span className="block parallax-content">
-                  {renderAnimatedText('NOWSHIN NOWYAL NIRJHOR', 0.5)}
+                <span className="parallax-content block whitespace-nowrap hidden sm:block">
+                  NOWSHIN NOWYAL NIRJHOR
                 </span>
 
-                <span className="parallax-content mt-2 block text-blue-900 dark:text-blue-400">
+                <span className="parallax-content block sm:hidden">
+                  NOWSHIN NOWYAL<br />
+                  NIRJHOR
+                </span>
+
+                <span className="parallax-content mt-3 block text-blue-900 dark:text-blue-400">
                   Mechatronics Engineer & Web Developer
                 </span>
               </h1>
 
-              <p className="parallax-content text-xl font-light text-gray-600 dark:text-gray-300 md:text-2xl">
+              <p className="parallax-content text-lg sm:text-xl font-light text-gray-600 dark:text-gray-300 max-w-xl">
                 I build high-performance web applications and intelligent
                 automation systems that premium teams actually ship.
               </p>
