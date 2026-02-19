@@ -218,23 +218,21 @@ My north star:
 
 <p align="center">
 
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Nirjhor1357&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github&cache_seconds=1800" />
+  <!-- Main stats (stable mirror) -->
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=NIRJHOR1357&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github&cache_seconds=86400" />
 
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nirjhor1357&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=1800" />
-
-</p>
-
-<p align="center">
-
-  <img src="https://streak-stats.demolab.com?user=Nirjhor1357&theme=tokyonight&hide_border=true&cache_seconds=1800" />
+  <!-- Top languages -->
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=NIRJHOR1357&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=86400" />
 
 </p>
 
 <p align="center">
 
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Nirjhor1357&theme=tokyo-night&hide_border=true" />
+  <!-- Streak (stable endpoint) -->
+  <img src="https://streak-stats.demolab.com?user=NIRJHOR1357&theme=tokyonight&hide_border=true" />
 
 </p>
+
 
 ---
 
