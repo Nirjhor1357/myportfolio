@@ -1,73 +1,210 @@
-# React + TypeScript + Vite
+<!-- ============================== -->
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<!-- 🔥 PREMIUM PORTFOLIO README -->
 
-Currently, two official plugins are available:
+<!-- ============================== -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p align="center">
+  <img src="https://img.shields.io/badge/Portfolio-Live-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/React-TypeScript-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/TailwindCSS-Modern-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" />
+</p>
 
-## React Compiler
+<h1 align="center">
+  🚀 Nowshin Nowyal Nirjhor — Portfolio
+</h1>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<p align="center">
+  <b>Mechatronics Engineer • Full-Stack Developer • Automation Enthusiast</b>
+</p>
 
-## Expanding the ESLint configuration
+<p align="center">
+  Building intelligent systems that bridge hardware and software.
+</p>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🌐 Live Website
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+<p align="center">
+  👉 <a href="https://www.nowshinnirjhor.me/" target="_blank"><b>www.nowshinnirjhor.me</b></a>
+</p>
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## ✨ About This Portfolio
+
+This is my modern developer portfolio designed to showcase my work in:
+
+* ⚙️ Mechatronics Engineering
+* 🌐 Full-Stack Web Development
+* 🤖 Intelligent Automation
+* 📊 Performance-focused systems
+
+The website emphasizes:
+
+* Clean premium UI
+* Smooth micro-interactions
+* Strong performance
+* Real engineering mindset
+
+---
+
+## 🧩 Key Features
+
+✅ Fully responsive design
+✅ Premium motion & interactions
+✅ Dark mode support 🌙
+✅ Performance optimized ⚡
+✅ SEO friendly
+✅ Modern component architecture
+✅ Custom cursor glow effect
+✅ Clean visual hierarchy
+
+---
+
+## 🛠️ Tech Stack
+
+### 🎨 Frontend
+
+* React + TypeScript
+* Tailwind CSS
+* Vite
+* Lucide React
+
+### 🚀 Deployment
+
+* Vercel
+* Namecheap Custom Domain
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+ ├── sections/
+ │    ├── Hero.tsx
+ │    ├── About.tsx
+ │    ├── Projects.tsx
+ │    ├── Blog.tsx
+ │    ├── CTA.tsx
+ │    └── Footer.tsx
+ ├── components/
+ ├── App.tsx
+ └── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Run Locally
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+cd YOUR_REPO
 ```
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Start development server
+
+```bash
+npm run dev
+```
+
+Open in browser:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 📸 Preview
+
+> 💡 Tip: Add screenshots or a GIF here for maximum recruiter impact.
+
+Example:
+
+```
+/public/preview.png
+```
+
+Then:
+
+```html
+<p align="center">
+  <img src="public/preview.png" width="800" />
+</p>
+```
+
+---
+
+## 🎯 Roadmap
+
+* [ ] Advanced project case studies
+* [ ] Blog CMS integration
+* [ ] More IoT showcases
+* [ ] Performance audits
+* [ ] Accessibility improvements
+
+---
+
+## 👨‍💻 About Me
+
+I am a **Mechatronics & Industrial Engineering student at CUET** passionate about building systems that combine:
+
+* Mechanical engineering
+* Electronics
+* Embedded systems
+* Modern web technologies
+
+I focus on creating solutions that are:
+
+* Practical
+* Scalable
+* Production-ready
+
+---
+
+## 📊 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Nirjhor1357&show_icons=true&theme=tokyonight" height="165" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nirjhor1357&layout=compact&theme=tokyonight" height="165" />
+</p>
+
+---
+
+## 🤝 Connect With Me
+
+<p align="center">
+  <a href="mailto:nowshinnowyalnirjhor@gmail.com">
+    <img src="https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail" />
+  </a>
+  <a href="https://www.linkedin.com/in/nowshin-nirjhor/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin" />
+  </a>
+  <a href="https://github.com/Nirjhor1357" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github" />
+  </a>
+</p>
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a **star ⭐** — it helps a lot!
+
+---
+
+<p align="center">
+  <b>Built with precision, performance, and an engineering mindset.</b>
+</p>
