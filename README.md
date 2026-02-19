@@ -214,11 +214,34 @@ My north star:
 
 ---
 
-# 📊 GitHub Analytics
+# 📊 GitHub Intelligence
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=NIRJHOR1357&show_icons=true&theme=tokyonight" height="165" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=NIRJHOR1357&layout=compact&theme=tokyonight" height="165" />
+
+  <!-- Main stats -->
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=NIRJHOR1357&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" />
+
+  <!-- Top languages -->
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=NIRJHOR1357&layout=compact&theme=tokyonight&hide_border=true" />
+
+</p>
+
+<p align="center">
+
+  <!-- Contribution streak -->
+  <img src="https://streak-stats.demolab.com?user=NIRJHOR1357&theme=tokyonight&hide_border=true" />
+
+</p>
+
+<p align="center">
+
+  <!-- Activity graph -->
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=NIRJHOR1357&theme=tokyo-night&hide_border=true" />
+
+</p>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=NIRJHOR1357&style=for-the-badge&color=blue" />
 </p>
 
 ---
