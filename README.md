@@ -5,7 +5,7 @@
 <!-- ======================================================= -->
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/NIRJHOR1357/myportfolio/main/public/preview-banner.png" alt="Nowshin Nowyal Nirjhor Portfolio Banner" />
+  <img src="https://raw.githubusercontent.com/NIRJHOR1357/myportfolio/main/public/preview-banner.png.png" alt="Nowshin Nowyal Nirjhor Portfolio Banner" />
 </p>
 
 <p align="center">
