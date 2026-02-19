@@ -5,7 +5,7 @@
 <!-- ======================================================= -->
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/NIRJHOR1357/myportfolio/main/public/images/preview-banner.png" alt="Nowshin Nowyal Nirjhor Portfolio Banner" />
+  <img src="https://raw.githubusercontent.com/Nirjhor1357/myportfolio/main/public/images/preview-banner.png" alt="Nowshin Nowyal Nirjhor Portfolio Banner" />
 </p>
 
 <p align="center">
@@ -152,7 +152,7 @@ This project actively optimizes for:
 ## Clone
 
 ```bash
-git clone https://github.com/NIRJHOR1357/myportfolio.git
+git clone https://github.com/Nirjhor1357/myportfolio.git
 cd myportfolio
 ```
 
@@ -219,29 +219,29 @@ My north star:
 <p align="center">
 
   <!-- Main stats -->
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=NIRJHOR1357&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Nirjhor1357&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" />
 
   <!-- Top languages -->
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=NIRJHOR1357&layout=compact&theme=tokyonight&hide_border=true" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nirjhor1357&layout=compact&theme=tokyonight&hide_border=true" />
 
 </p>
 
 <p align="center">
 
   <!-- Contribution streak -->
-  <img src="https://streak-stats.demolab.com?user=NIRJHOR1357&theme=tokyonight&hide_border=true" />
+  <img src="https://streak-stats.demolab.com?user=Nirjhor1357&theme=tokyonight&hide_border=true" />
 
 </p>
 
 <p align="center">
 
   <!-- Activity graph -->
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=NIRJHOR1357&theme=tokyo-night&hide_border=true" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Nirjhor1357&theme=tokyo-night&hide_border=true" />
 
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=NIRJHOR1357&style=for-the-badge&color=blue" />
+  <img src="https://komarev.com/ghpvc/?username=Nirjhor1357&style=for-the-badge&color=blue" />
 </p>
 
 ---
@@ -255,7 +255,7 @@ My north star:
   <a href="https://www.linkedin.com/in/nowshin-nirjhor/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-Let's%20Talk-blue?style=for-the-badge&logo=linkedin" />
   </a>
-  <a href="https://github.com/NIRJHOR1357" target="_blank">
+  <a href="https://github.com/Nirjhor1357" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github" />
   </a>
 </p>
