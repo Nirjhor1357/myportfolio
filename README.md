@@ -127,7 +127,7 @@ http://localhost:5173
 
 ---
 
-/* ## 📸 Preview
+<!-- ## 📸 Preview
 
 > 💡 Tip: Add screenshots or a GIF here for maximum recruiter impact.
 
@@ -143,7 +143,7 @@ Then:
 <p align="center">
   <img src="public/preview.png" width="800" />
 </p>
-``` */
+``` -->
 
 ---
 
