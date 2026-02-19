@@ -11,11 +11,11 @@ const Hero = () => {
 
   // ✅ initial load
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100);
+    const timer = setTimeout(() => setIsLoaded(true), 120);
     return () => clearTimeout(timer);
   }, []);
 
-  // ✅ optimized parallax
+  // ✅ smooth parallax (lightweight)
   useEffect(() => {
     const handleScroll = () => {
       if (!heroRef.current || !imageRef.current) return;
@@ -24,22 +24,22 @@ const Hero = () => {
       const heroHeight = heroRef.current.offsetHeight;
       const progress = Math.min(scrollY / heroHeight, 1);
 
-      const content = heroRef.current.querySelectorAll('.parallax-content');
+      heroRef.current
+        .querySelectorAll<HTMLElement>('.parallax-content')
+        .forEach((el) => {
+          el.style.transform = `translateY(${-progress * 40}px)`;
+          el.style.opacity = `${1 - progress * 1.05}`;
+        });
 
-      content.forEach((el) => {
-        const element = el as HTMLElement;
-        element.style.transform = `translateY(${-progress * 50}px)`;
-        element.style.opacity = `${1 - progress * 1.1}`;
-      });
-
-      imageRef.current.style.transform = `translateY(${progress * 40}px) scale(${1 + progress * 0.05})`;
+      imageRef.current.style.transform =
+        `translateY(${progress * 30}px) scale(${1 + progress * 0.04})`;
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // ✅ smooth cursor glow (throttled)
+  // ✅ cursor glow (throttled)
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
@@ -56,6 +56,29 @@ const Hero = () => {
     };
   }, []);
 
+  // ✅ text animation (stable)
+  const renderAnimatedText = (text: string, baseDelay = 0) => (
+    <>
+      {text.split('').map((char, index) => (
+        <span
+          key={index}
+          className="inline-block will-change-transform"
+          style={{
+            opacity: isLoaded ? 1 : 0,
+            transform: isLoaded
+              ? 'translateY(0) rotateX(0deg)'
+              : 'translateY(40px) rotateX(90deg)',
+            transition: `all 0.6s var(--ease-expo-out) ${
+              baseDelay + index * 0.045
+            }s`,
+          }}
+        >
+          {char === ' ' ? '\u00A0' : char}
+        </span>
+      ))}
+    </>
+  );
+
   const scrollToProjects = () =>
     document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
 
@@ -68,12 +91,12 @@ const Hero = () => {
       ref={heroRef}
       className="relative min-h-screen w-full overflow-hidden bg-white dark:bg-gray-950"
     >
-      {/* 🌈 DEPTH BACKGROUND */}
+      {/* 🌈 BACKGROUND */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 h-[600px] w-[600px] rounded-full bg-blue-500/10 blur-3xl" />
         <div className="absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full bg-indigo-500/10 blur-3xl" />
 
-        {/* ✅ PREMIUM NOISE (properly visible) */}
+        {/* noise */}
         <div
           className="absolute inset-0"
           style={{
@@ -103,28 +126,35 @@ const Hero = () => {
       {/* CONTENT */}
       <div className="relative z-10 flex min-h-screen items-center">
         <div className="mx-auto w-full max-w-7xl px-6 py-24 lg:px-8">
-          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-8">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+
             {/* LEFT */}
-            <div className="order-2 space-y-8 lg:order-1">
+            <div className="order-2 lg:order-1 space-y-8">
+
               <p className="parallax-content text-sm font-medium uppercase tracking-widest text-blue-600">
                 Mechatronics Engineer & Full-Stack Developer
               </p>
 
-              {/* ✅ FIXED NAME (desktop + mobile perfect) */}
+              {/* ✅ CLEAN STACKED NAME (NO MORE OVERLAP EVER) */}
               <h1
-                className="font-bold leading-[0.95] tracking-[-0.02em] text-[42px] sm:text-5xl md:text-6xl lg:text-7xl dark:text-white"
+                className="parallax-content font-bold leading-[0.9] tracking-[-0.02em]
+                text-[42px] sm:text-5xl md:text-6xl lg:text-7xl
+                dark:text-white"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
-                <span className="parallax-content block whitespace-nowrap hidden sm:block">
-                  NOWSHIN NOWYAL NIRJHOR
+                <span className="block">
+                  {renderAnimatedText('NOWSHIN', 0.4)}
                 </span>
 
-                <span className="parallax-content block sm:hidden">
-                  NOWSHIN NOWYAL<br />
-                  NIRJHOR
+                <span className="block">
+                  {renderAnimatedText('NOWYAL', 0.7)}
                 </span>
 
-                <span className="parallax-content mt-3 block text-blue-900 dark:text-blue-400">
+                <span className="block">
+                  {renderAnimatedText('NIRJHOR', 1.0)}
+                </span>
+
+                <span className="mt-4 block text-blue-900 dark:text-blue-400">
                   Mechatronics Engineer & Web Developer
                 </span>
               </h1>
@@ -178,7 +208,7 @@ const Hero = () => {
             {/* RIGHT IMAGE */}
             <div className="relative order-1 lg:order-2">
               <div ref={imageRef} className="relative">
-                <div className="relative mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-2xl shadow-2xl transition-transform duration-500 hover:scale-[1.02] lg:max-w-none">
+                <div className="relative mx-auto aspect-[4/5] w-full max-w-md lg:max-w-[520px] overflow-hidden rounded-2xl shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
                   <img
                     src="/images/hero-portrait.jpg"
                     alt="Nowshin Nowyal Nirjhor"
@@ -188,6 +218,7 @@ const Hero = () => {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
