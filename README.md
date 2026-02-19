@@ -1,125 +1,174 @@
-<!-- ============================== -->
+<!-- ======================================================= -->
 
-<!-- 🔥 PREMIUM PORTFOLIO README -->
+<!-- 🦄 UNICORN-TIER PORTFOLIO README — TOP 0.1% ENGINEER -->
 
-<!-- ============================== -->
+<!-- ======================================================= -->
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/NIRJHOR1357/myportfolio/main/public/preview-banner.png" alt="Nowshin Nowyal Nirjhor Portfolio Banner" />
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Portfolio-Live-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/React-TypeScript-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
-  <img src="https://img.shields.io/badge/TailwindCSS-Modern-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-Strict-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/TailwindCSS-Utility--First-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vite-Lightning%20Fast-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/Performance-Optimized-success?style=for-the-badge" />
 </p>
 
 <h1 align="center">
-  🚀 Nowshin Nowyal Nirjhor — Portfolio
+  Nowshin Nowyal Nirjhor
 </h1>
 
 <p align="center">
-  <b>Mechatronics Engineer • Full-Stack Developer • Automation Enthusiast</b>
+  <b>Mechatronics Engineer • Full-Stack Developer • Intelligent Systems Builder</b>
 </p>
 
 <p align="center">
-  Building intelligent systems that bridge hardware and software.
+  Production-grade portfolio engineered for performance, clarity, and real-world impact.
 </p>
 
 ---
 
-## 🌐 Live Website
+# 🚀 Live Experience
 
 <p align="center">
-  👉 <a href="https://www.nowshinnirjhor.me/" target="_blank"><b>www.nowshinnirjhor.me</b></a>
+  <a href="https://www.nowshinnirjhor.me/" target="_blank">
+    <img src="https://img.shields.io/badge/Launch%20Portfolio-nowshinnirjhor.me-2563EB?style=for-the-badge" />
+  </a>
 </p>
 
 ---
 
-## ✨ About This Portfolio
+# 🧠 Philosophy
 
-This is my modern developer portfolio designed to showcase my work in:
+This portfolio is built with an **engineering-first mindset**.
 
-* ⚙️ Mechatronics Engineering
-* 🌐 Full-Stack Web Development
-* 🤖 Intelligent Automation
-* 📊 Performance-focused systems
+Not just visually polished — but architected for:
 
-The website emphasizes:
+* predictable performance
+* scalable structure
+* maintainable code
+* production realism
 
-* Clean premium UI
-* Smooth micro-interactions
-* Strong performance
-* Real engineering mindset
+> ✨ The goal is simple: build things that can ship in the real world.
 
 ---
 
-## 🧩 Key Features
+# 🏗️ System Design
 
-✅ Fully responsive design
-✅ Premium motion & interactions
-✅ Dark mode support 🌙
-✅ Performance optimized ⚡
-✅ SEO friendly
-✅ Modern component architecture
-✅ Custom cursor glow effect
-✅ Clean visual hierarchy
+## Core Principles
+
+* ⚡ 60fps motion pipeline
+* 🧩 component isolation
+* 🧠 minimal cognitive load
+* 📉 low layout shift
+* 🛠️ long-term maintainability
+
+## Signature Interaction Layer
+
+* Custom parallax engine
+* Cursor spotlight system
+* Staggered text reveal
+* Depth background compositing
+* Motion-safe transitions
 
 ---
 
-## 🛠️ Tech Stack
+# ✨ Feature Matrix
 
-### 🎨 Frontend
+| Category          | Implementation     |
+| ----------------- | ------------------ |
+| Responsive Design | ✅ Mobile → Desktop |
+| Dark Mode         | ✅ System ready     |
+| Performance       | ✅ GPU-friendly     |
+| Animations        | ✅ Custom tuned     |
+| SEO               | ✅ Semantic HTML    |
+| Accessibility     | ✅ Focus safe       |
+| DX                | ✅ Fast refresh     |
+| Deployment        | ✅ Vercel CI        |
 
-* React + TypeScript
+---
+
+# 🛠️ Technology Stack
+
+## Frontend
+
+* React 18
+* TypeScript (strict)
 * Tailwind CSS
 * Vite
 * Lucide React
 
-### 🚀 Deployment
+## Infrastructure
 
-* Vercel
-* Namecheap Custom Domain
+* Vercel — hosting & CI
+* Namecheap — domain
+* GitHub — version control
 
 ---
 
-## 📁 Project Structure
+# 📂 Repository Layout
 
 ```
 src/
  ├── sections/
- │    ├── Hero.tsx
- │    ├── About.tsx
- │    ├── Projects.tsx
- │    ├── Blog.tsx
- │    ├── CTA.tsx
- │    └── Footer.tsx
- ├── components/
- ├── App.tsx
- └── main.tsx
+ │    ├── Hero.tsx        # Conversion surface
+ │    ├── About.tsx       # Engineering narrative
+ │    ├── Projects.tsx    # Work showcase
+ │    ├── Blog.tsx        # Knowledge layer
+ │    ├── CTA.tsx         # Call-to-action
+ │    └── Footer.tsx      # Contact surface
+ │
+ ├── components/          # Shared primitives
+ ├── App.tsx              # Root composition
+ └── main.tsx             # Entry point
 ```
 
 ---
 
-## 🚀 Run Locally
+# ⚡ Performance Engineering
 
-### 1️⃣ Clone the repository
+This project actively optimizes for:
+
+* minimized main-thread work
+* transform-based animation
+* controlled paint regions
+* throttled mouse tracking
+* efficient hydration
+
+**Target Lighthouse scores**
+
+* 🟢 Performance ≥ 90
+* 🟢 Accessibility ≥ 90
+* 🟢 Best Practices ≥ 95
+* 🟢 SEO ≥ 95
+
+---
+
+# 🚀 Local Development
+
+## Clone
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
+git clone https://github.com/NIRJHOR1357/myportfolio.git
+cd myportfolio
 ```
 
-### 2️⃣ Install dependencies
+## Install
 
 ```bash
 npm install
 ```
 
-### 3️⃣ Start development server
+## Run
 
 ```bash
 npm run dev
 ```
 
-Open in browser:
+Open:
 
 ```
 http://localhost:5173
@@ -127,84 +176,75 @@ http://localhost:5173
 
 ---
 
-<!-- ## 📸 Preview
+# 🗺️ Forward Roadmap
 
-> 💡 Tip: Add screenshots or a GIF here for maximum recruiter impact.
+## Phase 1 — Engineering Depth
 
-Example:
-
-```
-/public/preview.png
-```
-
-Then:
-
-```html
-<p align="center">
-  <img src="public/preview.png" width="800" />
-</p>
-``` 
-
---- -->
-
-## 🎯 Roadmap
-
+* [ ] ESP8266 IoT showcase
 * [ ] Advanced project case studies
+* [ ] Motion refinement pass
+* [ ] Accessibility audit
+
+## Phase 2 — Platform Expansion
+
 * [ ] Blog CMS integration
-* [ ] More IoT showcases
-* [ ] Performance audits
-* [ ] Accessibility improvements
+* [ ] Project filtering system
+* [ ] Performance profiling
+
+## Phase 3 — System Level
+
+* [ ] Embedded systems demos
+* [ ] Interactive project sandboxes
+* [ ] Full case study pages
 
 ---
 
-## 👨‍💻 About Me
+# 👨‍💻 About Me
 
-I am a **Mechatronics & Industrial Engineering student at CUET** passionate about building systems that combine:
+I am a **Mechatronics & Industrial Engineering student at CUET** focused on building systems at the intersection of:
 
-* Mechanical engineering
-* Electronics
-* Embedded systems
-* Modern web technologies
+* mechanical engineering
+* embedded electronics
+* intelligent automation
+* modern web platforms
 
-I focus on creating solutions that are:
+My north star:
 
-* Practical
-* Scalable
-* Production-ready
+> Build systems that are practical, scalable, and production-ready.
 
 ---
 
-## 📊 GitHub Stats
+# 📊 GitHub Analytics
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Nirjhor1357&show_icons=true&theme=tokyonight" height="165" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nirjhor1357&layout=compact&theme=tokyonight" height="165" />
+  <img src="https://github-readme-stats.vercel.app/api?username=NIRJHOR1357&show_icons=true&theme=tokyonight" height="165" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=NIRJHOR1357&layout=compact&theme=tokyonight" height="165" />
 </p>
 
 ---
 
-## 🤝 Connect With Me
+# 🤝 Connect with me
 
 <p align="center">
   <a href="mailto:nowshinnowyalnirjhor@gmail.com">
-    <img src="https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail" />
+    <img src="https://img.shields.io/badge/Email-Open%20to%20Work-red?style=for-the-badge&logo=gmail" />
   </a>
   <a href="https://www.linkedin.com/in/nowshin-nirjhor/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin" />
+    <img src="https://img.shields.io/badge/LinkedIn-Let's%20Talk-blue?style=for-the-badge&logo=linkedin" />
   </a>
-  <a href="https://github.com/Nirjhor1357" target="_blank">
+  <a href="https://github.com/NIRJHOR1357" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github" />
   </a>
 </p>
 
 ---
 
-## ⭐ Support
+# ⭐ If You Found This Valuable
 
-If you like this project, consider giving it a **star ⭐** — it helps a lot!
+Give the repo a **star ⭐** — it genuinely helps.
 
 ---
 
 <p align="center">
-  <b>Built with precision, performance, and an engineering mindset.</b>
+  <b>Engineered with intent. Tuned for performance. Built for the long game.</b>
 </p>
