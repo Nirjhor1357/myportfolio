@@ -2,11 +2,11 @@
     "rewrites": [
         {
             "source": "/taskmanager",
-            "destination": "https://task-manager-pro-git-main-nirjhors-projects.vercel.app/"
+            "destination": "https://task-manager-pro-alpha-lilac.vercel.app/"
         },
         {
             "source": "/taskmanager/:path*",
-            "destination": "https://task-manager-pro-git-main-nirjhors-projects.vercel.app//:path*"
+            "destination": "https://task-manager-pro-alpha-lilac.vercel.app/:path*"
         }
     ]
 }
