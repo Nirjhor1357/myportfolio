@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/taskmanager",
+      "destination": "https://task-manager-pro-alpha-lilac.vercel.app/"
+    },
+    {
+      "source": "/taskmanager/:path*",
+      "destination": "https://task-manager-pro-alpha-lilac.vercel.app//:path*"
+    }
+  ]
+}
