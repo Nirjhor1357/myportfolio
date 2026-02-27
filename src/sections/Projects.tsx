@@ -15,6 +15,24 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: 0,
+    category: "Web Development",
+    title: "Task Manager Pro",
+    description:
+      "A premium drag-and-drop task management application built with React, TypeScript, and dnd-kit. Features include task filtering, inline editing, priority management, and smooth animations for a modern productivity experience.",
+    image: "/images/project-taskmanager.jpg",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "dnd-kit",
+      "Framer Motion"
+    ],
+    icon: Cpu,
+    live: "https://nowshinnirjhor.me/taskmanager",
+    github: "https://github.com/Nirjhor1357/TaskManagerPro",
+  },
+  {
     id: 1,
     category: 'Industrial Automation',
     title: 'Automated Conveyor System',
@@ -49,7 +67,7 @@ const projects: Project[] = [
     icon: Cpu,
     live: '#',
     github: 'https://github.com/Nirjhor1357',
-  },
+  }
 ];
 
 const Projects = () => {
@@ -116,9 +134,8 @@ const Projects = () => {
               >
                 {/* IMAGE CARD */}
                 <div
-                  className={`interactive-lift relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 ${
-                    index % 2 === 1 ? 'lg:order-2' : ''
-                  }`}
+                  className={`interactive-lift relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 ${index % 2 === 1 ? 'lg:order-2' : ''
+                    }`}
                 >
                   <div className="aspect-[3/2] overflow-hidden">
                     <img
@@ -147,9 +164,8 @@ const Projects = () => {
 
                 {/* CONTENT */}
                 <div
-                  className={`space-y-6 ${
-                    index % 2 === 1 ? 'lg:order-1 lg:text-right' : ''
-                  }`}
+                  className={`space-y-6 ${index % 2 === 1 ? 'lg:order-1 lg:text-right' : ''
+                    }`}
                 >
                   <span className="text-sm font-medium text-blue-600 tracking-wider uppercase">
                     {project.category}
@@ -168,9 +184,8 @@ const Projects = () => {
 
                   {/* tech */}
                   <div
-                    className={`flex flex-wrap gap-2 ${
-                      index % 2 === 1 ? 'lg:justify-end' : ''
-                    }`}
+                    className={`flex flex-wrap gap-2 ${index % 2 === 1 ? 'lg:justify-end' : ''
+                      }`}
                   >
                     {project.technologies.map((tech) => (
                       <span
@@ -184,9 +199,8 @@ const Projects = () => {
 
                   {/* 🔥 TRUST BUTTONS (NEW) */}
                   <div
-                    className={`flex gap-4 pt-2 ${
-                      index % 2 === 1 ? 'lg:justify-end' : ''
-                    }`}
+                    className={`flex gap-4 pt-2 ${index % 2 === 1 ? 'lg:justify-end' : ''
+                      }`}
                   >
                     <a
                       href={project.live}
