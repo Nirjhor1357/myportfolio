@@ -12,6 +12,7 @@ import SectionDivider from './components/ui/SectionDivider.tsx';
 import Skills from './sections/Skills';
 import CurrentlyBuilding from './sections/CurrentlyBuilding';
 import CaseStudies from './sections/CaseStudies';
+import GithubActivity from './sections/GithubActivity';
 
 function App() {
   const [scrollY, setScrollY] = useState(0);
@@ -47,9 +48,12 @@ function App() {
         <SectionDivider />
 
         <Projects />
-        <SectionDivider />
+<SectionDivider />
 
-        <CaseStudies />
+<GithubActivity />
+<SectionDivider />
+
+<CaseStudies />
         <SectionDivider />
 
         <CurrentlyBuilding />
