@@ -1,20 +1,25 @@
-import { useEffect, useRef, useState } from 'react';
-import './App.css';
+import { useEffect, useRef, useState } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 
-import Navigation from './sections/Navigation';
-import Hero from './sections/Hero';
-import About from './sections/About';
-import Projects from './sections/Projects';
-import Blog from './sections/Blog';
-import CTA from './sections/CTA';
-import Footer from './sections/Footer';
-import SectionDivider from './components/ui/SectionDivider.tsx';
-import Skills from './sections/Skills';
-import CurrentlyBuilding from './sections/CurrentlyBuilding';
-import CaseStudies from './sections/CaseStudies';
-import GithubActivity from './sections/GithubActivity';
+import "./App.css";
 
-function App() {
+import Navigation from "./sections/Navigation";
+import Hero from "./sections/Hero";
+import About from "./sections/About";
+import Projects from "./sections/Projects";
+import Blog from "./sections/Blog";
+import CTA from "./sections/CTA";
+import Footer from "./sections/Footer";
+import SectionDivider from "./components/ui/SectionDivider";
+import Skills from "./sections/Skills";
+import CurrentlyBuilding from "./sections/CurrentlyBuilding";
+import CaseStudies from "./sections/CaseStudies";
+import GithubActivity from "./sections/GithubActivity";
+
+import ProjectDetails from "./pages/ProjectDetails";
+
+function Home() {
   const [scrollY, setScrollY] = useState(0);
   const mainRef = useRef<HTMLDivElement | null>(null);
 
@@ -23,14 +28,17 @@ function App() {
       setScrollY(window.scrollY);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <div
+    <motion.div
       ref={mainRef}
       className="relative bg-white dark:bg-gray-950 min-h-screen transition-colors duration-300"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
     >
       {/* Navigation */}
       <Navigation scrollY={scrollY} />
@@ -48,12 +56,12 @@ function App() {
         <SectionDivider />
 
         <Projects />
-<SectionDivider />
+        <SectionDivider />
 
-<GithubActivity />
-<SectionDivider />
+        <GithubActivity />
+        <SectionDivider />
 
-<CaseStudies />
+        <CaseStudies />
         <SectionDivider />
 
         <CurrentlyBuilding />
@@ -68,7 +76,20 @@ function App() {
 
       {/* Footer */}
       <Footer />
-    </div>
+    </motion.div>
+  );
+}
+
+function App() {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects/:slug" element={<ProjectDetails />} />
+      </Routes>
+    </AnimatePresence>
   );
 }
 
