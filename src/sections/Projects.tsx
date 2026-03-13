@@ -31,7 +31,7 @@ const projects: Project[] = [
     title: "Task Manager Pro",
     description:
       "A premium drag-and-drop task management application built with React, TypeScript, and dnd-kit. Features include task filtering, inline editing, priority management, and smooth animations for a modern productivity experience.",
-    image: "/images/project-taskmanager.jpg",
+    image: "/images/project-taskmanager.webp",
     technologies: ["React", "TypeScript", "Tailwind", "dnd-kit", "Framer Motion"],
     icon: Cpu,
     live: "https://nowshinnirjhor.me/taskmanager",
@@ -44,7 +44,7 @@ const projects: Project[] = [
     title: "Automated Conveyor System",
     description:
       "Designed and implemented a PLC-controlled conveyor system with real-time sensor feedback, improving material handling efficiency and operational safety.",
-    image: "/images/project1-automation.jpg",
+    image: "/images/project1-automation.webp",
     technologies: ["PLC", "Sensors", "Pneumatics", "HMI"],
     icon: Settings,
     live: "#",
@@ -57,7 +57,7 @@ const projects: Project[] = [
     title: "Mechanical Component Design",
     description:
       "Developed precision 3D mechanical components in SolidWorks with stress analysis and optimized material selection.",
-    image: "/images/project2-cad.jpg",
+    image: "/images/project2-cad.webp",
     technologies: ["SolidWorks", "AutoCAD", "FEA", "GD&T"],
     icon: Wrench,
     live: "#",
@@ -70,7 +70,7 @@ const projects: Project[] = [
     title: "Smart Monitoring System",
     description:
       "Built an IoT monitoring system using Arduino and MQTT to track temperature, humidity, and vibration in real time.",
-    image: "/images/project3-iot.jpg",
+    image: "/images/project3-iot.webp",
     technologies: ["Arduino", "Python", "MQTT", "Node-RED"],
     icon: Cpu,
     live: "#",

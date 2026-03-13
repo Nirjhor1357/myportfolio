@@ -210,7 +210,7 @@ const Hero = () => {
               <div ref={imageRef} className="relative">
                 <div className="relative mx-auto aspect-[4/5] w-full max-w-md lg:max-w-[520px] overflow-hidden rounded-2xl shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
                   <img
-                    src="/images/hero-portrait.jpg"
+                    src="/images/hero-portrait.webp"
                     alt="Nowshin Nowyal Nirjhor"
                     loading="lazy"
                     className="h-full w-full object-cover"

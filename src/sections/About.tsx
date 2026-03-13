@@ -104,7 +104,7 @@ const About = () => {
                 }}
               >
                 <img
-                  src="/images/about-portrait.jpg"
+                  src="/images/about-portrait.webp"
                   alt="About Me"
                   className="w-full aspect-[3/4] object-cover hover:scale-105 transition-transform duration-700"
                 />

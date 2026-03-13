@@ -18,6 +18,7 @@ import CaseStudies from "./sections/CaseStudies";
 import GithubActivity from "./sections/GithubActivity";
 import GithubStats from "./sections/GithubStats";
 import ProjectDetails from "./pages/ProjectDetails";
+import Philosophy from "./sections/Philosophy";
 
 function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -68,6 +69,9 @@ function Home() {
         <SectionDivider />
 
         <CurrentlyBuilding />
+        <SectionDivider />
+
+        <Philosophy />
         <SectionDivider />
 
         <Blog />

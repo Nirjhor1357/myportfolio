@@ -18,7 +18,7 @@ const blogPosts: BlogPost[] = [
     title: 'The Future of Industrial Automation',
     excerpt: 'Exploring how Industry 4.0 is transforming manufacturing with smart systems and AI-driven processes.',
     date: 'Dec 15, 2024',
-    image: '/images/blog1-engineering.jpg',
+    image: '/images/blog1-engineering.webp',
     offset: 0,
   },
   {
@@ -27,7 +27,7 @@ const blogPosts: BlogPost[] = [
     title: 'Getting Started with Industrial Robotics',
     excerpt: 'A beginner guide to understanding robotic arms, kinematics, and programming for manufacturing.',
     date: 'Dec 10, 2024',
-    image: '/images/blog2-robotics.jpg',
+    image: '/images/blog2-robotics.webp',
     offset: 40,
   },
   {
@@ -36,7 +36,7 @@ const blogPosts: BlogPost[] = [
     title: 'My Journey as an Engineering Student',
     excerpt: 'Reflections on my academic journey at CUET and lessons learned along the way.',
     date: 'Dec 5, 2024',
-    image: '/images/blog3-study.jpg',
+    image: '/images/blog3-study.webp',
     offset: 20,
   },
 ];
