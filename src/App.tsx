@@ -16,7 +16,7 @@ import Skills from "./sections/Skills";
 import CurrentlyBuilding from "./sections/CurrentlyBuilding";
 import CaseStudies from "./sections/CaseStudies";
 import GithubActivity from "./sections/GithubActivity";
-
+import GithubStats from "./sections/GithubStats";
 import ProjectDetails from "./pages/ProjectDetails";
 
 function Home() {
@@ -59,6 +59,9 @@ function Home() {
         <SectionDivider />
 
         <GithubActivity />
+        <SectionDivider />
+
+        <GithubStats />
         <SectionDivider />
 
         <CaseStudies />
