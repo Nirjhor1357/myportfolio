@@ -9,6 +9,9 @@ import Blog from './sections/Blog';
 import CTA from './sections/CTA';
 import Footer from './sections/Footer';
 import SectionDivider from './components/ui/SectionDivider.tsx';
+import Skills from './sections/Skills';
+import CurrentlyBuilding from './sections/CurrentlyBuilding';
+import CaseStudies from './sections/CaseStudies';
 
 function App() {
   const [scrollY, setScrollY] = useState(0);
@@ -40,13 +43,23 @@ function App() {
         <About />
         <SectionDivider />
 
+        <Skills />
+        <SectionDivider />
+
         <Projects />
+        <SectionDivider />
+
+        <CaseStudies />
+        <SectionDivider />
+
+        <CurrentlyBuilding />
         <SectionDivider />
 
         <Blog />
         <SectionDivider />
 
         <CTA />
+
       </main>
 
       {/* Footer */}
