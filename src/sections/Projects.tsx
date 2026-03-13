@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   ArrowRight,
   ExternalLink,
@@ -11,6 +12,7 @@ import {
 
 interface Project {
   id: number;
+  slug: string;
   category: string;
   title: string;
   description: string;
@@ -24,6 +26,7 @@ interface Project {
 const projects: Project[] = [
   {
     id: 0,
+    slug: "task-manager-pro",
     category: "Web Development",
     title: "Task Manager Pro",
     description:
@@ -36,10 +39,11 @@ const projects: Project[] = [
   },
   {
     id: 1,
+    slug: "automated-conveyor-system",
     category: "Industrial Automation",
     title: "Automated Conveyor System",
     description:
-      "Designed and implemented a PLC-controlled conveyor system with real-time sensor feedback, improving material handling efficiency and operational safety in industrial workflows.",
+      "Designed and implemented a PLC-controlled conveyor system with real-time sensor feedback, improving material handling efficiency and operational safety.",
     image: "/images/project1-automation.jpg",
     technologies: ["PLC", "Sensors", "Pneumatics", "HMI"],
     icon: Settings,
@@ -48,10 +52,11 @@ const projects: Project[] = [
   },
   {
     id: 2,
+    slug: "mechanical-component-design",
     category: "CAD Design",
     title: "Mechanical Component Design",
     description:
-      "Developed precision 3D mechanical components in SolidWorks with stress analysis and optimized material selection, improving structural reliability and manufacturability.",
+      "Developed precision 3D mechanical components in SolidWorks with stress analysis and optimized material selection.",
     image: "/images/project2-cad.jpg",
     technologies: ["SolidWorks", "AutoCAD", "FEA", "GD&T"],
     icon: Wrench,
@@ -60,10 +65,11 @@ const projects: Project[] = [
   },
   {
     id: 3,
+    slug: "smart-monitoring-system",
     category: "IoT & Robotics",
     title: "Smart Monitoring System",
     description:
-      "Built an IoT monitoring system using Arduino and MQTT to track temperature, humidity, and vibration in real time, reducing manual inspection workload and improving equipment visibility.",
+      "Built an IoT monitoring system using Arduino and MQTT to track temperature, humidity, and vibration in real time.",
     image: "/images/project3-iot.jpg",
     technologies: ["Arduino", "Python", "MQTT", "Node-RED"],
     icon: Cpu,
@@ -77,14 +83,15 @@ const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const section = sectionRef.current;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) setIsVisible(true);
       },
-      { threshold: 0.1 }
+      { threshold: 0.15 }
     );
 
-    const section = sectionRef.current;
     if (section) observer.observe(section);
 
     return () => {
@@ -120,7 +127,7 @@ const Projects = () => {
           </h2>
         </div>
 
-        {/* PROJECT LIST */}
+        {/* PROJECTS */}
         <div className="space-y-24 lg:space-y-32">
           {projects.map((project, index) => {
             const Icon = project.icon;
@@ -134,7 +141,7 @@ const Projects = () => {
                 className="group grid lg:grid-cols-2 gap-8 lg:gap-16 items-center"
               >
 
-                {/* IMAGE CARD */}
+                {/* IMAGE */}
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   className={`relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 ${
@@ -155,7 +162,7 @@ const Projects = () => {
                   {/* NUMBER */}
                   <div className="absolute top-4 left-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg px-3 py-1">
                     <span className="text-sm font-bold text-blue-900 dark:text-blue-400">
-                      0{project.id}
+                      {String(index + 1).padStart(2, "0")}
                     </span>
                   </div>
 
@@ -215,8 +222,7 @@ const Projects = () => {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 text-sm font-medium text-blue-900 dark:text-blue-400 hover:underline"
                       >
-                        Live Demo
-                        <ExternalLink size={14} />
+                        Live Demo <ExternalLink size={14} />
                       </a>
                     )}
 
@@ -227,20 +233,22 @@ const Projects = () => {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 text-sm font-medium text-blue-900 dark:text-blue-400 hover:underline"
                       >
-                        GitHub
-                        <Github size={14} />
+                        GitHub <Github size={14} />
                       </a>
                     )}
                   </div>
 
-                  {/* DETAILS CTA */}
-                  <button className="group inline-flex items-center gap-2 text-blue-900 dark:text-blue-400 font-medium hover:gap-4 transition-all duration-300">
+                  {/* DETAILS */}
+                  <Link
+                    to={`/projects/${project.slug}`}
+                    className="group inline-flex items-center gap-2 text-blue-900 dark:text-blue-400 font-medium hover:gap-4 transition-all duration-300"
+                  >
                     View Details
                     <ArrowRight
                       size={18}
                       className="group-hover:translate-x-1 transition-transform"
                     />
-                  </button>
+                  </Link>
                 </div>
               </motion.div>
             );
