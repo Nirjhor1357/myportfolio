@@ -110,17 +110,15 @@ const Projects = () => {
         {/* HEADER */}
         <div className="mb-20">
           <span
-            className={`text-sm font-medium text-blue-600 tracking-widest uppercase block mb-4 transition-all duration-700 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-            }`}
+            className={`text-sm font-medium text-blue-600 tracking-widest uppercase block mb-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+              }`}
           >
             Academic & Personal Projects
           </span>
 
           <h2
-            className={`text-4xl md:text-5xl font-bold dark:text-white transition-all duration-700 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
+            className={`text-4xl md:text-5xl font-bold dark:text-white transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
             style={{ fontFamily: "Montserrat, sans-serif" }}
           >
             Featured Projects
@@ -144,15 +142,15 @@ const Projects = () => {
                 {/* IMAGE */}
                 <motion.div
                   whileHover={{ scale: 1.02 }}
-                  className={`relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 ${
-                    index % 2 === 1 ? "lg:order-2" : ""
-                  }`}
+                  className={`relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 ${index % 2 === 1 ? "lg:order-2" : ""
+                    }`}
                 >
                   <div className="aspect-[3/2] overflow-hidden">
                     <img
                       src={project.image}
                       alt={project.title}
                       loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
@@ -174,9 +172,8 @@ const Projects = () => {
 
                 {/* CONTENT */}
                 <div
-                  className={`space-y-6 ${
-                    index % 2 === 1 ? "lg:order-1 lg:text-right" : ""
-                  }`}
+                  className={`space-y-6 ${index % 2 === 1 ? "lg:order-1 lg:text-right" : ""
+                    }`}
                 >
                   <span className="text-sm font-medium text-blue-600 tracking-wider uppercase">
                     {project.category}
@@ -195,9 +192,8 @@ const Projects = () => {
 
                   {/* TECH */}
                   <div
-                    className={`flex flex-wrap gap-2 ${
-                      index % 2 === 1 ? "lg:justify-end" : ""
-                    }`}
+                    className={`flex flex-wrap gap-2 ${index % 2 === 1 ? "lg:justify-end" : ""
+                      }`}
                   >
                     {project.technologies.map((tech) => (
                       <span
@@ -211,9 +207,8 @@ const Projects = () => {
 
                   {/* LINKS */}
                   <div
-                    className={`flex gap-4 pt-2 ${
-                      index % 2 === 1 ? "lg:justify-end" : ""
-                    }`}
+                    className={`flex gap-4 pt-2 ${index % 2 === 1 ? "lg:justify-end" : ""
+                      }`}
                   >
                     {project.live && (
                       <a
@@ -257,9 +252,8 @@ const Projects = () => {
 
         {/* VIEW ALL */}
         <div
-          className={`mt-24 text-center transition-all duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className={`mt-24 text-center transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
         >
           <button className="group inline-flex items-center gap-3 px-8 py-4 border-2 border-blue-900 dark:border-blue-400 text-blue-900 dark:text-blue-400 font-medium rounded-full hover:bg-blue-900 hover:text-white dark:hover:bg-blue-500 transition-all duration-300">
             View All Projects

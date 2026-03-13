@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, lazy, Suspense } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -17,8 +17,10 @@ import CurrentlyBuilding from "./sections/CurrentlyBuilding";
 import CaseStudies from "./sections/CaseStudies";
 import GithubActivity from "./sections/GithubActivity";
 import GithubStats from "./sections/GithubStats";
-import ProjectDetails from "./pages/ProjectDetails";
 import Philosophy from "./sections/Philosophy";
+
+/* Lazy-loaded page */
+const ProjectDetails = lazy(() => import("./pages/ProjectDetails"));
 
 function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -26,11 +28,16 @@ function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      requestAnimationFrame(() => {
+        setScrollY(window.scrollY);
+      });
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -92,10 +99,12 @@ function App() {
 
   return (
     <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects/:slug" element={<ProjectDetails />} />
-      </Routes>
+      <Suspense fallback={<div className="p-10 text-center">Loading...</div>}>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects/:slug" element={<ProjectDetails />} />
+        </Routes>
+      </Suspense>
     </AnimatePresence>
   );
 }
