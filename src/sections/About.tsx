@@ -225,6 +225,7 @@ const About = () => {
               <h3 className="text-sm font-medium text-foreground-500 uppercase tracking-wider">
                 Achievements
               </h3>
+
               <div className="flex flex-wrap gap-2">
                 {achievements.map((achievement, index) => (
                   <span
@@ -237,23 +238,29 @@ const About = () => {
               </div>
             </div>
 
-            {/* Skills Tags */}
+            {/* Engineering Skills */}
             <div
-              className="flex flex-wrap gap-3 pt-4"
+              className="space-y-3 pt-6"
               style={{
                 opacity: isVisible ? 1 : 0,
-                transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
-                transition: 'all 0.6s var(--ease-expo-out) 0.8s',
+                transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
+                transition: 'all 0.6s var(--ease-expo-out) 0.7s',
               }}
             >
-              {['PLC Programming', 'CAD/CAM', 'Robotics', 'IoT', 'Automation'].map((skill) => (
-                <span
-                  key={skill}
-                  className="px-4 py-2 bg-gray-100 text-gray-800 text-sm font-medium rounded-full hover:bg-blue-900 hover:text-white transition-colors duration-300 cursor-default"
-                >
-                  {skill}
-                </span>
-              ))}
+              <h3 className="text-sm font-medium text-foreground-500 uppercase tracking-wider">
+                Engineering Skills
+              </h3>
+
+              <div className="flex flex-wrap gap-2">
+                {['PLC Programming', 'CAD/CAM', 'Robotics', 'IoT', 'Automation'].map((skill, index) => (
+                  <span
+                    key={index}
+                    className="px-4 py-2 bg-gray-100 text-gray-800 text-sm font-medium rounded-full hover:bg-blue-900 hover:text-white transition-colors duration-300 cursor-default"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
