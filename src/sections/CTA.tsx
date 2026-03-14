@@ -14,7 +14,6 @@ const CTA = () => {
     )
 
     if (sectionRef.current) observer.observe(sectionRef.current)
-
     return () => observer.disconnect()
   }, [])
 
@@ -25,7 +24,7 @@ const CTA = () => {
         className="inline-block"
         style={{
           opacity: isVisible ? 1 : 0,
-          transform: isVisible ? "translateY(0)" : "translateY(60px)",
+          transform: isVisible ? "translateY(0)" : "translateY(50px)",
           transition: `all 0.6s var(--ease-expo-out) ${baseDelay + index * 0.03}s`,
         }}
       >
@@ -39,20 +38,21 @@ const CTA = () => {
       ref={sectionRef}
       className="relative py-32 lg:py-48 bg-background overflow-hidden"
     >
-      {/* Background Glow */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse at center, rgba(59,130,246,0.08) 0%, transparent 70%)",
-          opacity: isVisible ? 1 : 0,
-          transform: isVisible ? "scale(1)" : "scale(0.8)",
-          transition: "all 1s var(--ease-expo-out)",
-        }}
-      />
 
-      {/* Floating Shapes */}
+      {/* Premium Glow Background */}
+      <div className="absolute inset-0 pointer-events-none">
+
+        {/* light glow */}
+        <div className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_50%_40%,rgba(59,130,246,0.15),transparent_60%)]" />
+
+        {/* dark glow */}
+        <div className="absolute inset-0 opacity-0 dark:opacity-100 bg-[radial-gradient(circle_at_50%_35%,rgba(59,130,246,0.35),transparent_65%)] transition-opacity duration-700" />
+
+      </div>
+
+      {/* floating shapes */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
+
         <div
           className="absolute top-20 left-[10%] w-16 h-16 border border-border rounded-full"
           style={{
@@ -86,13 +86,15 @@ const CTA = () => {
             animation: isVisible ? "float 10s ease-in-out infinite 0.5s" : "none",
           }}
         />
+
       </div>
 
-      {/* Content */}
+      {/* content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
-        {/* Icon */}
+
+        {/* icon */}
         <div
-          className="inline-flex items-center justify-center w-16 h-16 bg-primary text-primary-foreground rounded-2xl mb-8"
+          className="inline-flex items-center justify-center w-16 h-16 bg-primary text-primary-foreground rounded-2xl mb-8 shadow-lg"
           style={{
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? "scale(1)" : "scale(0)",
@@ -102,19 +104,19 @@ const CTA = () => {
           <Sparkles size={28} />
         </div>
 
-        {/* Heading */}
+        {/* heading */}
         <h2
           className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground"
           style={{ fontFamily: "Montserrat, sans-serif" }}
         >
           {renderAnimatedText("Let's Build Something", 0.3)}
           <br />
-          <span className="text-primary">
+          <span className="bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent">
             {renderAnimatedText("Amazing Together", 0.6)}
           </span>
         </h2>
 
-        {/* Subtitle */}
+        {/* subtitle */}
         <p
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12"
           style={{
@@ -127,38 +129,40 @@ const CTA = () => {
           internships, or research opportunities. Let's connect!
         </p>
 
-        {/* Contact */}
+        {/* contact chips */}
         <div
-          className="flex flex-wrap items-center justify-center gap-6 mb-12 text-muted-foreground"
+          className="flex flex-wrap items-center justify-center gap-4 mb-12"
           style={{
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? "translateY(0)" : "translateY(20px)",
             transition: "all 0.6s var(--ease-expo-out) 0.9s",
           }}
         >
+
           <a
             href="mailto:nowshinnowyalnirjhor@gmail.com"
-            className="flex items-center gap-2 hover:text-primary transition"
+            className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border backdrop-blur-sm hover:border-primary transition"
           >
-            <Mail size={18} />
-            <span>nowshinnowyalnirjhor@gmail.com</span>
+            <Mail size={16} />
+            <span className="text-sm">Email</span>
           </a>
 
           <a
             href="tel:+8801306445939"
-            className="flex items-center gap-2 hover:text-primary transition"
+            className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border backdrop-blur-sm hover:border-primary transition"
           >
-            <Phone size={18} />
-            <span>+880 130-6445939</span>
+            <Phone size={16} />
+            <span className="text-sm">Call</span>
           </a>
 
-          <span className="flex items-center gap-2">
-            <MapPin size={18} />
-            <span>Chittagong, Bangladesh</span>
-          </span>
+          <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border backdrop-blur-sm">
+            <MapPin size={16} />
+            <span className="text-sm">Bangladesh</span>
+          </div>
+
         </div>
 
-        {/* Buttons */}
+        {/* buttons */}
         <div
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
           style={{
@@ -167,9 +171,10 @@ const CTA = () => {
             transition: "all 0.7s var(--ease-elastic) 1s",
           }}
         >
+
           <a
             href="mailto:nowshinnowyalnirjhor@gmail.com"
-            className="group inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-full hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="group inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-full hover:scale-105 hover:shadow-xl transition-all duration-300"
           >
             Send Message
             <Send
@@ -181,37 +186,32 @@ const CTA = () => {
           <a
             href="#"
             onClick={(e) => e.preventDefault()}
-            className="inline-flex items-center gap-2 px-8 py-4 border border-border text-foreground font-medium rounded-full hover:bg-accent transition"
+            className="inline-flex items-center gap-2 px-8 py-4 border border-border text-foreground font-medium rounded-full hover:bg-accent transition-all duration-300"
           >
             Download Resume
           </a>
+
         </div>
 
-        {/* Skills */}
+        {/* skills */}
         <div
-          className="mt-16 flex flex-wrap items-center justify-center gap-4"
+          className="mt-16 flex flex-wrap items-center justify-center gap-3"
           style={{
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? "translateY(0)" : "translateY(30px)",
             transition: "all 0.6s var(--ease-expo-out) 1.2s",
           }}
         >
-          {[
-            "PLC Programming",
-            "CAD Design",
-            "Robotics",
-            "IoT",
-            "Automation",
-            "Python",
-          ].map((skill) => (
+          {["PLC Programming","CAD Design","Robotics","IoT","Automation","Python"].map((skill) => (
             <span
               key={skill}
-              className="px-4 py-2 bg-card border border-border text-sm font-medium rounded-full text-foreground"
+              className="px-4 py-2 bg-card border border-border text-sm rounded-full text-muted-foreground hover:text-foreground hover:border-primary transition"
             >
               {skill}
             </span>
           ))}
         </div>
+
       </div>
     </section>
   )
