@@ -102,7 +102,7 @@ const Footer = () => {
                   key={social.label}
                   href={social.href}
                   onClick={(e) => e.preventDefault()}
-                  className="group w-10 h-10 rounded-full border border-blue-700 flex items-center justify-center hover:bg-white hover:border-white transition-all duration-300"
+                  className="group w-10 h-10 rounded-full border border-blue-700 flex items-center justify-center hover:bg-background hover:border-white transition-all duration-300"
                   aria-label={social.label}
                   style={{
                     opacity: isVisible ? 1 : 0,
@@ -149,7 +149,7 @@ const Footer = () => {
                     }}
                     className="text-blue-200 hover:text-white transition-colors duration-300 inline-flex items-center gap-2 group"
                   >
-                    <span className="w-0 h-px bg-white group-hover:w-4 transition-all duration-300" />
+                    <span className="w-0 h-px bg-background group-hover:w-4 transition-all duration-300" />
                     {link.label}
                   </a>
                 </li>
@@ -213,7 +213,7 @@ const Footer = () => {
               }}
             >
               Back to top
-              <span className="w-8 h-8 rounded-full border border-blue-700 flex items-center justify-center group-hover:bg-white group-hover:border-white transition-all duration-300">
+              <span className="w-8 h-8 rounded-full border border-blue-700 flex items-center justify-center group-hover:bg-background group-hover:border-white transition-all duration-300">
                 <ArrowUp
                   size={14}
                   className="group-hover:text-blue-900 transition-colors"

@@ -23,7 +23,7 @@ export default function Skills() {
         <div className="grid md:grid-cols-2 gap-10">
           {Object.entries(skills).map(([category, items]) => (
             <div key={category}>
-              <h3 className="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-300">
+              <h3 className="text-lg font-semibold mb-4 text-foreground-700 dark:text-foreground-300">
                 {category}
               </h3>
 

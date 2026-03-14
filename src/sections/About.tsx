@@ -71,7 +71,7 @@ const About = () => {
     <section
       id="about"
       ref={sectionRef}
-      className="relative py-24 lg:py-32 bg-white overflow-hidden"
+      className="relative py-24 lg:py-32 bg-background overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 pointer-events-none opacity-5">
@@ -168,7 +168,7 @@ const About = () => {
 
             {/* Description */}
             <div
-              className="space-y-4 text-gray-600 leading-relaxed"
+              className="space-y-4 text-foreground-600 leading-relaxed"
               style={{
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
@@ -192,7 +192,7 @@ const About = () => {
             <div className="space-y-4">
               {education.map((edu) => (
                 <div key={edu.id} className="space-y-2">
-                  <p className="font-semibold text-gray-800 dark:text-gray-200">
+                  <p className="font-semibold text-foreground-800 dark:text-foreground-200">
                     {edu.degree}
                   </p>
 
@@ -200,7 +200,7 @@ const About = () => {
                     {edu.institution}
                   </p>
 
-                  <div className="flex flex-wrap gap-4 text-sm text-gray-500">
+                  <div className="flex flex-wrap gap-4 text-sm text-foreground-500">
                     <span className="flex items-center gap-1">
                       <span className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
@@ -222,7 +222,7 @@ const About = () => {
                 transition: 'all 0.6s var(--ease-expo-out) 0.6s',
               }}
             >
-              <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wider">
+              <h3 className="text-sm font-medium text-foreground-500 uppercase tracking-wider">
                 Achievements
               </h3>
               <div className="flex flex-wrap gap-2">

@@ -19,13 +19,13 @@ export default function CaseStudies() {
               TaskManager Pro
             </h3>
 
-            <p className="text-gray-600 dark:text-gray-400 mb-3">
+            <p className="text-foreground-600 dark:text-foreground-400 mb-3">
               A productivity-focused task management web application designed
               to help users organize tasks with priority levels and structured
               workflow.
             </p>
 
-            <ul className="text-sm space-y-1 text-gray-600 dark:text-gray-400">
+            <ul className="text-sm space-y-1 text-foreground-600 dark:text-foreground-400">
               <li>• Built using React + TypeScript + Tailwind</li>
               <li>• Component-based architecture</li>
               <li>• Optimized UI for productivity</li>

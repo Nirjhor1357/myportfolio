@@ -36,7 +36,7 @@ export default function CurrentlyBuilding() {
             >
               <h3 className="font-semibold mb-2">{project.title}</h3>
 
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-sm text-foreground-600 dark:text-foreground-400">
                 {project.desc}
               </p>
             </div>

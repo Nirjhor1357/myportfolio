@@ -62,7 +62,7 @@ export default function ProjectDetails() {
       {/* Title */}
       <h1 className="text-4xl font-bold mb-6">{project.title}</h1>
 
-      <p className="text-gray-600 dark:text-gray-300 mb-10">
+      <p className="text-foreground-600 dark:text-foreground-300 mb-10">
         {project.description}
       </p>
 
@@ -87,22 +87,22 @@ export default function ProjectDetails() {
 
         <div>
           <h2 className="text-2xl font-semibold mb-2">Problem</h2>
-          <p className="text-gray-600 dark:text-gray-300">{project.problem}</p>
+          <p className="text-foreground-600 dark:text-foreground-300">{project.problem}</p>
         </div>
 
         <div>
           <h2 className="text-2xl font-semibold mb-2">Solution</h2>
-          <p className="text-gray-600 dark:text-gray-300">{project.solution}</p>
+          <p className="text-foreground-600 dark:text-foreground-300">{project.solution}</p>
         </div>
 
         <div>
           <h2 className="text-2xl font-semibold mb-2">Challenges</h2>
-          <p className="text-gray-600 dark:text-gray-300">{project.challenges}</p>
+          <p className="text-foreground-600 dark:text-foreground-300">{project.challenges}</p>
         </div>
 
         <div>
           <h2 className="text-2xl font-semibold mb-2">Outcome</h2>
-          <p className="text-gray-600 dark:text-gray-300">{project.outcome}</p>
+          <p className="text-foreground-600 dark:text-foreground-300">{project.outcome}</p>
         </div>
 
       </div>

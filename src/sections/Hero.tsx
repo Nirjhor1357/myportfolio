@@ -89,7 +89,7 @@ const Hero = () => {
     <section
       id="hero"
       ref={heroRef}
-      className="relative min-h-screen w-full overflow-hidden bg-white dark:bg-gray-950"
+      className="relative min-h-screen w-full overflow-hidden bg-background dark:bg-gray-950"
     >
       {/* 🌈 BACKGROUND */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
@@ -159,7 +159,7 @@ const Hero = () => {
                 </span>
               </h1>
 
-              <p className="parallax-content text-lg sm:text-xl font-light text-gray-600 dark:text-gray-300 max-w-xl">
+              <p className="parallax-content text-lg sm:text-xl font-light text-foreground-600 dark:text-foreground-300 max-w-xl">
                 I build high-performance web applications and intelligent
                 automation systems that premium teams actually ship.
               </p>

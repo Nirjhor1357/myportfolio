@@ -37,7 +37,7 @@ export default function Philosophy() {
           Engineering Philosophy
         </h2>
 
-        <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
+        <p className="text-foreground-600 dark:text-foreground-400 mt-4 max-w-2xl mx-auto">
           The principles that guide how I design, build, and improve software systems.
         </p>
       </motion.div>
@@ -47,11 +47,11 @@ export default function Philosophy() {
           <motion.div
             key={p.title}
             whileHover={{ y: -6 }}
-            className="p-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900"
+            className="p-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-background dark:bg-gray-900"
           >
             <h3 className="text-xl font-semibold mb-3">{p.title}</h3>
 
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+            <p className="text-foreground-600 dark:text-foreground-400 leading-relaxed">
               {p.description}
             </p>
           </motion.div>

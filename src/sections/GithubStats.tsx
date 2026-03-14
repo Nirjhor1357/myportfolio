@@ -15,7 +15,7 @@ const GithubStats = () => {
           GitHub Stats
         </h2>
 
-        <p className="text-gray-600 dark:text-gray-400 mt-4">
+        <p className="text-foreground-600 dark:text-foreground-400 mt-4">
           A quick snapshot of my development activity and open-source contributions.
         </p>
       </motion.div>

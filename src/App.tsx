@@ -1,49 +1,62 @@
-import { useEffect, useRef, useState, lazy, Suspense } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useRef, useState, lazy, Suspense } from "react"
+import { Routes, Route, useLocation } from "react-router-dom"
+import { AnimatePresence, motion } from "framer-motion"
 
-import "./App.css";
+import "./App.css"
 
-import Navigation from "./sections/Navigation";
-import Hero from "./sections/Hero";
-import About from "./sections/About";
-import Projects from "./sections/Projects";
-import Blog from "./sections/Blog";
-import CTA from "./sections/CTA";
-import Footer from "./sections/Footer";
-import SectionDivider from "./components/ui/SectionDivider";
-import Skills from "./sections/Skills";
-import CurrentlyBuilding from "./sections/CurrentlyBuilding";
-import CaseStudies from "./sections/CaseStudies";
-import GithubActivity from "./sections/GithubActivity";
-import GithubStats from "./sections/GithubStats";
-import Philosophy from "./sections/Philosophy";
+/* Sections */
+import Navigation from "./sections/Navigation"
+import Hero from "./sections/Hero"
+import About from "./sections/About"
+import Skills from "./sections/Skills"
+import Projects from "./sections/Projects"
+import Blog from "./sections/Blog"
+import CTA from "./sections/CTA"
+import Footer from "./sections/Footer"
+import CurrentlyBuilding from "./sections/CurrentlyBuilding"
+import CaseStudies from "./sections/CaseStudies"
+import GithubActivity from "./sections/GithubActivity"
+import GithubStats from "./sections/GithubStats"
+import Philosophy from "./sections/Philosophy"
 
-/* Lazy-loaded page */
-const ProjectDetails = lazy(() => import("./pages/ProjectDetails"));
+/* UI */
+import SectionDivider from "./components/ui/SectionDivider"
+
+/* Lazy page */
+const ProjectDetails = lazy(() => import("./pages/ProjectDetails"))
+
+/* ============================
+   HOME PAGE
+============================ */
 
 function Home() {
-  const [scrollY, setScrollY] = useState(0);
-  const mainRef = useRef<HTMLDivElement | null>(null);
+  const [scrollY, setScrollY] = useState(0)
+  const mainRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
-    const handleScroll = () => {
-      requestAnimationFrame(() => {
-        setScrollY(window.scrollY);
-      });
-    };
+    let ticking = false
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrollY(window.scrollY)
+          ticking = false
+        })
+        ticking = true
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true })
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   return (
     <motion.div
       ref={mainRef}
-      className="relative bg-white dark:bg-gray-950 min-h-screen transition-colors duration-300"
+      className="relative min-h-screen bg-background text-foreground transition-colors duration-300"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -52,7 +65,7 @@ function Home() {
       <Navigation scrollY={scrollY} />
 
       {/* Main Content */}
-      <main className="relative space-y-6 lg:space-y-10">
+      <main className="relative space-y-8 lg:space-y-12">
 
         <Hero />
         <SectionDivider />
@@ -91,22 +104,32 @@ function Home() {
       {/* Footer */}
       <Footer />
     </motion.div>
-  );
+  )
 }
 
+/* ============================
+   APP ROUTER
+============================ */
+
 function App() {
-  const location = useLocation();
+  const location = useLocation()
 
   return (
     <AnimatePresence mode="wait">
-      <Suspense fallback={<div className="p-10 text-center">Loading...</div>}>
+      <Suspense
+        fallback={
+          <div className="flex items-center justify-center min-h-screen text-muted-foreground">
+            Loading...
+          </div>
+        }
+      >
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/projects/:slug" element={<ProjectDetails />} />
         </Routes>
       </Suspense>
     </AnimatePresence>
-  );
+  )
 }
 
-export default App;
+export default App

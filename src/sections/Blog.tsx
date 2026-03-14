@@ -67,7 +67,7 @@ const Blog = () => {
     <section
       id="blog"
       ref={sectionRef}
-      className="relative py-24 lg:py-32 bg-white overflow-hidden"
+      className="relative py-24 lg:py-32 bg-background overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
@@ -95,7 +95,7 @@ const Blog = () => {
               Latest Insights
             </h2>
             <p
-              className="text-gray-500 max-w-md"
+              className="text-foreground-500 max-w-md"
               style={{
                 opacity: isVisible ? 1 : 0,
                 transition: 'opacity 0.6s ease 0.2s',
@@ -122,7 +122,7 @@ const Blog = () => {
               }}
             >
               <div
-                className="card-lift bg-white rounded-2xl overflow-hidden border border-gray-100"
+                className="card-lift bg-background rounded-2xl overflow-hidden border border-gray-100"
                 style={{
                   transform: hoveredCard === post.id ? 'translateY(-10px)' : 'translateY(0)',
                   boxShadow: hoveredCard === post.id
@@ -147,13 +147,13 @@ const Blog = () => {
                   />
                   {/* Category Badge */}
                   <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-xs font-medium rounded-full text-blue-900">
+                    <span className="px-3 py-1 bg-background/90 backdrop-blur-sm text-xs font-medium rounded-full text-blue-900">
                       {post.category}
                     </span>
                   </div>
                   {/* Arrow Icon */}
                   <div
-                    className="absolute bottom-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
+                    className="absolute bottom-4 right-4 w-10 h-10 bg-background rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
                     style={{
                       transform: hoveredCard === post.id ? 'translateY(0)' : 'translateY(10px)',
                     }}
@@ -165,7 +165,7 @@ const Blog = () => {
                 {/* Content */}
                 <div className="p-6">
                   {/* Date */}
-                  <div className="flex items-center gap-2 text-sm text-gray-400 mb-3">
+                  <div className="flex items-center gap-2 text-sm text-foreground-400 mb-3">
                     <Calendar size={14} />
                     <span>{post.date}</span>
                   </div>
@@ -179,7 +179,7 @@ const Blog = () => {
                   </h3>
 
                   {/* Excerpt */}
-                  <p className="text-gray-500 text-sm leading-relaxed">
+                  <p className="text-foreground-500 text-sm leading-relaxed">
                     {post.excerpt}
                   </p>
                 </div>

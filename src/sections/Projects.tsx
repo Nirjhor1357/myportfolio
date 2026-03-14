@@ -158,14 +158,14 @@ const Projects = () => {
                   <div className="absolute inset-0 bg-blue-900/0 group-hover:bg-blue-900/10 transition-all duration-500" />
 
                   {/* NUMBER */}
-                  <div className="absolute top-4 left-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg px-3 py-1">
+                  <div className="absolute top-4 left-4 bg-background/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg px-3 py-1">
                     <span className="text-sm font-bold text-blue-900 dark:text-blue-400">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                   </div>
 
                   {/* ICON */}
-                  <div className="absolute bottom-4 right-4 w-12 h-12 bg-white dark:bg-gray-800 rounded-xl shadow-lg flex items-center justify-center">
+                  <div className="absolute bottom-4 right-4 w-12 h-12 bg-background dark:bg-gray-800 rounded-xl shadow-lg flex items-center justify-center">
                     <Icon className="w-6 h-6 text-blue-900 dark:text-blue-400" />
                   </div>
                 </motion.div>
@@ -186,7 +186,7 @@ const Projects = () => {
                     {project.title}
                   </h3>
 
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed max-w-md">
+                  <p className="text-foreground-600 dark:text-foreground-300 leading-relaxed max-w-md">
                     {project.description}
                   </p>
 
