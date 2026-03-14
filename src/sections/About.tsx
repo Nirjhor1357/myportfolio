@@ -249,7 +249,7 @@ const About = () => {
               {['PLC Programming', 'CAD/CAM', 'Robotics', 'IoT', 'Automation'].map((skill) => (
                 <span
                   key={skill}
-                  className="px-4 py-2 bg-gray-100 text-sm font-medium rounded-full hover:bg-blue-900 hover:text-white transition-colors duration-300 cursor-default"
+                  className="px-4 py-2 bg-gray-100 text-gray-800 text-sm font-medium rounded-full hover:bg-blue-900 hover:text-white transition-colors duration-300 cursor-default"
                 >
                   {skill}
                 </span>
