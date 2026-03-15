@@ -18,6 +18,7 @@ import CaseStudies from "./sections/CaseStudies"
 import GithubActivity from "./sections/GithubActivity"
 import GithubStats from "./sections/GithubStats"
 import Philosophy from "./sections/Philosophy"
+import StudyPlanGenerator from "./pages/StudyPlanGenerator"
 
 /* UI */
 import SectionDivider from "./components/ui/SectionDivider"
@@ -125,6 +126,10 @@ function App() {
       >
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
+          <Route
+            path="/studyplangenerator"
+            element={<StudyPlanGenerator />}
+          />
           <Route path="/projects/:slug" element={<ProjectDetails />} />
         </Routes>
       </Suspense>
