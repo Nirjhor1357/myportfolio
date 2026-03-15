@@ -11,11 +11,11 @@
 
     {
       "source": "/studyplangenerator",
-      "destination": "https://study-plan-generator-xi.vercel.app/"
+      "destination": "/index.html"
     },
     {
       "source": "/studyplangenerator/:path*",
-      "destination": "https://study-plan-generator-xi.vercel.app/:path*"
+      "destination": "/index.html"
     }
   ]
 }
