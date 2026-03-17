@@ -38,7 +38,20 @@ const projects: Project[] = [
     github: "https://github.com/Nirjhor1357/TaskManagerPro",
   },
   {
-    id: 1,
+  id: 1,
+  slug: "ai-study-plan-generator",
+  category: "AI Web Application",
+  title: "AI Study Plan Generator",
+  description:
+    "An AI-powered study planning tool that generates optimized study schedules with analytics dashboards and downloadable PDF reports. Built to help students organize their learning efficiently.",
+  image: "/images/project-studyplanner.webp",
+  technologies: ["React", "TypeScript", "Tailwind", "Recharts", "jsPDF"],
+  icon: Cpu,
+  live: "https://nowshinnirjhor.me/studyplangenerator",
+  github: "https://github.com/Nirjhor1357/StudyPlanGenerator",
+},
+  {
+    id: 2,
     slug: "automated-conveyor-system",
     category: "Industrial Automation",
     title: "Automated Conveyor System",
@@ -51,7 +64,7 @@ const projects: Project[] = [
     github: "https://github.com/Nirjhor1357",
   },
   {
-    id: 2,
+    id: 3,
     slug: "mechanical-component-design",
     category: "CAD Design",
     title: "Mechanical Component Design",
@@ -64,7 +77,7 @@ const projects: Project[] = [
     github: "https://github.com/Nirjhor1357",
   },
   {
-    id: 3,
+    id: 4,
     slug: "smart-monitoring-system",
     category: "IoT & Robotics",
     title: "Smart Monitoring System",
